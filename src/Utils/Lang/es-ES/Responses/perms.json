@@ -1,0 +1,10 @@
+{
+    "ADMINISTRATOR": "Administrador",
+    "MANAGE_GUILD": "Gestionar Servidor",
+    "BAN_MEMBERS": "Banear Miembros",
+    "KICK_MEMBERS": "Expulsar Miembros",
+    "READ_MESSAGE_HISTORY": "Leer Historial de Mensajes",
+    "SEND_MESSAGES": "Enviar Mensajes",
+    "EMBED_LINKS": "Links Embed",
+    "ADD_REACTIONS": "Añadir Reacciones"
+}

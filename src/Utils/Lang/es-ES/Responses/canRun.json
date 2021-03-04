@@ -1,0 +1,11 @@
+{
+    "COOLDOWN": "Tienes que esperar **{{sec}}s para ejecutar este comando.**",
+    "ENABLED": "Este comando esta en mantenimiento",
+    "GUILD": "Este comando solo esta disponible para servidores",
+    "DEVS": "Este comando solo esta disponible para desarrolladores.",
+    "NSFW": "Este comando solo esta disponible para canales **NSFW**.",
+    "MEMBER_GUILD": "Necesitas los siguientes permisos: {{perms}}",
+    "MEMBER_CHANNEL": "Necesitas los siguientes permisos en este canal: {{perms}}",
+    "CLIENT_GUILD": "Necesito de los siguientes permisos: {{perms}}",
+    "CLIENT_CHANNEL": "Necesito de los siguientes permisos en este canal: {{perms}}"
+}

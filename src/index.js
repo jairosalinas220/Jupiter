@@ -11,7 +11,7 @@ const init = async () => {
         .loadEvents()
         .connectDataBase()
     const languages = require(path.join(__dirname, 'Utils', 'languages.js'))
-    client.translations = await languages() 
+    client.translations = await languages()
     client.login(process.env.TOKEN)
 
 };

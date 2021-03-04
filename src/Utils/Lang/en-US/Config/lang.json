@@ -1,0 +1,6 @@
+{
+    "VALID": "To set a language on the server use:\n> `{{prefix}} language [new language]`\nIf you want to see the list of languages use:\n> `{{prefix}} language list`",
+    "TYPES": "At the moment we have 2 Languages:\n **1. `en-US`**:\nDescription: United States English.\n__Usos:__\n> `{{prefix}}language en-Us`\n> `{{prefix}}language ingles`\n> `{{prefix}}language english`\n**2. `es-ES`**:\nDescription: Spanish from Spain.\n__Usos:__\n> `{{prefix}}language es-ES`\n> `{{prefix}}language español`\n> `{{prefix}}language spanish`",
+    "NO_NEW": "Este idioma ya estaba establecido en este servidor",
+    "OK": "Nuevo idioma establecido: {{lang}}"
+}

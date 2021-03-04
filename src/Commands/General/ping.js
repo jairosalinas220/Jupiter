@@ -1,14 +1,13 @@
 const BaseCommand = require('../../Utils/Class/commandClass')
 module.exports = class PingCommand extends BaseCommand {
-    constructor(client, options){
+    constructor(client, options) {
         super(client, {
             name: 'ping',
             aliases: ['latencia'],
-            dir: __dirname
+            dir: __dirname,
         })
     }
-    async run(msg, args){
-        console.log(this)
-        msg.channel.send(msg.translate('General/ping:MS', {ms: this.client.ws.ping}))
+    async run(msg, args) {
+        msg.channel.send(msg.translate('General/ping:MS', { ms: this.client.ws.ping }))
     }
 }

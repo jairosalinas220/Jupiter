@@ -1,0 +1,10 @@
+{
+    "ADMINISTRATOR": "Administrator",
+    "MANAGE_GUILD": "Manage Guild",
+    "BAN_MEMBERS": "Ban Members",
+    "KICK_MEMBERS": "Kick Members",
+    "READ_MESSAGE_HISTORY": "Read Message History",
+    "SEND_MESSAGES": "Send Messages",
+    "EMBED_LINKS": "EMBED_LINKS",
+    "ADD_REACTIONS": "Add Reactions"
+}

@@ -7,6 +7,7 @@ module.exports = class Jupiter extends Discord.Client {
         this.commands = new Discord.Collection();
         this.languages = require(path.join(__dirname, '..', 'Lang', 'languages.json'))
         this.db = require(path.join(__dirname, '..', '..', 'Database', 'index.js'))
+        this.devs = process.env.DEVS ? process.env.DEVS.split(', ') : [];
         //this.dbCache = {}
         //this.dbCache.guilds = new Discord.Collection()
     }
@@ -84,7 +85,7 @@ module.exports = class Jupiter extends Discord.Client {
             })
             return prefix;
         } else {
-            return true;
+            return ';;';
         }
     }
 }

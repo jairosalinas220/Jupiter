@@ -6,11 +6,11 @@ const fs = require('fs').promises
 async function walk(dir, nameSpaces = [], folder = '') {
     const files = await fs.readdir(dir)
     const languages = []
-    for(const file of files) {
+    for (const file of files) {
         const directory = await fs.stat(path.join(dir, file))
-        if(directory.isDirectory()) {
+        if (directory.isDirectory()) {
             const is = file.includes('-')
-            if(is) {
+            if (is) {
                 languages.push(file)
             }
             const fd = await walk(path.join(dir, file), nameSpaces, is ? '' : `${file}/`)

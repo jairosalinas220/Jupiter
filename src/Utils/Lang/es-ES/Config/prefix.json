@@ -1,0 +1,5 @@
+{
+    "ARGS": "Debes de decirme mi nuevo prefijo.\n> `{{prefix}}prefix [ nuevo prefix ]`",
+    "LENGTH": "El prefijo no debe sobrepasar los 5 caracteres.",
+    "OK": "Mi nuevo prefix es: `{{newPrefix}}`"
+}
