@@ -70,22 +70,4 @@ module.exports = class Jupiter extends Discord.Client {
         }
         //}
     }
-    findPrefix(msg, data) {
-        if (msg.channel.type !== 'dm') {//esto es si es un server
-            const prefixes = [`<@!${msg.client.user.id}>`,
-            `<@${msg.client.user.id}>`,
-            msg.client.user.username.toLowerCase(),
-            data.guild.prefix
-            ]
-            let prefix = null
-            prefixes.forEach((x) => {
-                if (msg.content.startsWith(x) || msg.content.toLowerCase().startsWith(x)) {
-                    prefix = x
-                }
-            })
-            return prefix;
-        } else {
-            return ';;';
-        }
-    }
 }

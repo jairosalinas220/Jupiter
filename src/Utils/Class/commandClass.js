@@ -34,22 +34,22 @@ module.exports = class BaseCommand {
         //if (msg.guild && this.memberGuildPermissions[0] && !this.memberGuildPermissions.some((x) => msg.member.permissions.has(x)) && !this.client.devs.includes(msg.author.id))
         //    return !this.sendOrReply(msg, `You need the following permissions: \`${this.memberGuildPermissions.map(this.parsePermission).join(', ')}\``, { allowedMentions: { users: [] } });
         if (msg.guild && this.memberGuildPermissions[0] && !this.memberGuildPermissions.some((x) => msg.member.permissions.has(x)) && !this.client.devs.includes(msg.author.id))
-            return !this.sendOrReply(msg, msg.translate('Responses:canRun:MEMBER_GUILD', { perms: this.translatePermissions(msg, this.memberGuildPermissions).join(', ') }), { allowedMentions: { users: [] } });
+            return !this.sendOrReply(msg, msg.translate('Responses/canRun:MEMBER_GUILD', { perms: this.translatePermissions(msg, this.memberGuildPermissions).join(', ') }), { allowedMentions: { users: [] } });
 
         //if (msg.guild && this.memberChannelPermissions[0] && !this.memberChannelPermissions.some((x) => msg.channel.permissionsFor(msg.member).has(x)) && !this.client.devs.includes(msg.author.id))
         //    return !this.sendOrReply(msg, `You need the following permissions on this channel: \`${this.memberChannelPermissions.map(this.parsePermission).join(', ')}\``, { allowedMentions: { users: [] } });
         if (msg.guild && this.memberChannelPermissions[0] && !this.memberChannelPermissions.some((x) => msg.channel.permissionsFor(msg.member).has(x)) && !this.client.devs.includes(msg.author.id))
-            return !this.sendOrReply(msg, msg.translate('Responses:canRun:MEMBER_CHANNEL', { perms: this.translatePermissions(msg, this.memberChannelPermissions).join(', ') }), { allowedMentions: { users: [] } });
+            return !this.sendOrReply(msg, msg.translate('Responses/canRun:MEMBER_CHANNEL', { perms: this.translatePermissions(msg, this.memberChannelPermissions).join(', ') }), { allowedMentions: { users: [] } });
 
         //if (msg.guild && this.botGuildPermissions[0] && !this.botGuildPermissions.some((x) => msg.guild.me.permissions.has(x)))
         //  return !this.sendOrReply(msg, `I need the following permissions: \`${this.botGuildPermissions.map(this.parsePermission).join(', ')}\``, { allowedMentions: { users: [] } });
         if (msg.guild && this.botGuildPermissions[0] && !this.botGuildPermissions.some((x) => msg.guild.me.permissions.has(x)))
-            return !this.sendOrReply(msg, msg.translate('Responses:canRun:CLIENT_GUILD', { perms: this.translatePermissions(msg, this.botGuildPermissions).join(', ') }), { allowedMentions: { users: [] } });
+            return !this.sendOrReply(msg, msg.translate('Responses/canRun:CLIENT_GUILD', { perms: this.translatePermissions(msg, this.botGuildPermissions).join(', ') }), { allowedMentions: { users: [] } });
 
         //if (msg.guild && this.botChannelPermissions[0] && !this.botChannelPermissions.some((x) => msg.channel.permissionsFor(msg.guild.me).has(x)))
         //  return !this.sendOrReply(msg, `I need the following permissions on this channel: \`${this.botChannelPermissions.map(this.parsePermission).join(', ')}\``, { allowedMentions: { users: [] } });
         if (msg.guild && this.botChannelPermissions[0] && !this.botChannelPermissions.some((x) => msg.channel.permissionsFor(msg.guild.me).has(x)))
-          return !this.sendOrReply(msg, msg.translate('Responses:canRun:CLIENT_GUILD', { perms: this.translatePermissions(msg, this.botChannelPermissions).join(', ') }), { allowedMentions: { users: [] } });
+          return !this.sendOrReply(msg, msg.translate('Responses/canRun:CLIENT_GUILD', { perms: this.translatePermissions(msg, this.botChannelPermissions).join(', ') }), { allowedMentions: { users: [] } });
 
         return true;
     }
@@ -64,7 +64,7 @@ module.exports = class BaseCommand {
     translatePermissions(msg, perms) {
         let array = [];
         for (const perm of perms) {
-            array.push(msg.translate(`Responses:perms:${perm}`))
+            array.push(msg.translate(`Responses/perms:${perm}`))
         }
         return array
     }

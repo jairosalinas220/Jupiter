@@ -14,31 +14,32 @@ module.exports = class PingCommand extends BaseCommand {
             case 'ingles':
             case 'english':
             case 'en-US': {
-                let ckeck = this.client.db.guild.findOne({guildID: msg.guild.id, language: 'en-US'})
+                let ckeck = await this.client.db.guild.findOne({guildID: msg.guild.id, language: 'en-US'})
                 if(ckeck) return msg.channel.send(msg.translate('Config/lang:NO_NEW'))
-                let lang = this.client.db.guild.findOne({guildID: msg.guild.id})
-                if(!lang) lang = new this.db.guild({ guildID: msg.guild.id, language: 'en-US', prefix: ';;' })
+                let lang = await this.client.db.guild.findOne({guildID: msg.guild.id})
+                if(!lang) lang = new this.client.db.guild({ guildID: msg.guild.id, language: 'en-US', prefix: ';;' })
                 lang.language = 'en-US'
                 await lang.save()
-                msg.channel.send(msg.translate('Config/lang:OK', {lang: 'en-US | English'}))
+                msg.channel.send('New language set: `es-US | English`')
                 break;
             }
             case 'español':
             case 'spanish':
             case 'es-ES': {
-                let ckeck = this.client.db.guild.findOne({guildID: msg.guild.id, language: 'en-US'})
+                let ckeck = await this.client.db.guild.findOne({guildID: msg.guild.id, language: 'es-ES'})
                 if(ckeck) return msg.channel.send(msg.translate('Config/lang:NO_NEW'))
-                let lang = this.client.db.guild.findOne({guildID: msg.guild.id})
-                if(!lang) lang = new this.db.guild({ guildID: msg.guild.id, language: 'en-US', prefix: ';;' })
-                lang.language = 'en-US'
+                let lang = await this.client.db.guild.findOne({guildID: msg.guild.id})
+                if(!lang) lang = new this.client.db.guild({ guildID: msg.guild.id, language: 'es-ES', prefix: ';;' })
+                lang.language = 'es-ES'
                 await lang.save()
-                msg.channel.send(msg.translate('Config/lang:OK', {lang: 'es-ES | Español'}))
+                msg.channel.send('Nuevo idioma establecido: `es-ES | Español`')
                 break;
             }
             case 'tipos':
             case 'list':
             case 'types': {
                 msg.channel.send(msg.translate('Config/lang:TYPES', {prefix: this.prefix}))
+                break;
             }
             default: {
                 msg.channel.send(msg.translate('Config/lang:VALID', {prefix: this.prefix}))

@@ -6,11 +6,19 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AviiiDev/Jupiter.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AviiiDev/Jupiter/issues"
+  },
+  "homepage": "https://github.com/AviiiDev/Jupiter#readme",
   "dependencies": {
-    "discord.js": "github:discordjs/discord.js",
+    "discord.js": "^12.5.1",
     "dotenv": "^8.2.0",
     "i18next": "^19.9.1",
     "i18next-node-fs-backend": "^2.1.3",
