@@ -12,7 +12,7 @@ module.exports = class Message extends EventClass {
             const guild = await this.client.findGuild(msg.guild.id)
             data.guild = guild
             msg.guild.data = guild
-            const modelo = await this.client.db.guild.findOne({ guildId: msg.guild.id });
+            const modelo = await this.client.db.guild.findOne({ guildID: msg.guild.id });
             prefix = modelo ? modelo.prefix : ';;';
         }
 
