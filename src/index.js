@@ -3,7 +3,7 @@ const path = require('path')
 require(path.join(__dirname, 'Utils', 'extenders.js'))
 global.Discord = require('discord.js')
 const Jupiter = require('./Utils/Class/clientClass')
-const client = new Jupiter()
+const client = new Jupiter({ partials: ["MESSAGE"], ws: { intents: 32767 } })
 
 const init = async () => {
 

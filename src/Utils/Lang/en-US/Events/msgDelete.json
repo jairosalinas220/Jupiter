@@ -1,0 +1,8 @@
+{
+    "CONTENT": "__**A new message has been deleted**__\n**Author:** {{author}}\n**Content:** {{message}}\n**Attachment:** {{att}}\n**Embed:** {{emb}}",
+    "NO_CONTENT": "No content.",
+    "ATT": "Attached below.",
+    "NO_ATT": "Not have attachment",
+    "EMBED": "Attached below.",
+    "NO_EMBED": "Not have embed."
+}

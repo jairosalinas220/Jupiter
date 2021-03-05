@@ -1,0 +1,8 @@
+{
+    "CONTENT": "__**Un nuevo mensaje ha sido borrado**__\n**Autor:** {{author}}\n**Contenido:** {{message}}\n**Archivo:** {{att}}\n**Embed:** {{emb}}",
+    "NO_CONTENT": "No hay contenido.",
+    "ATT": "Adjuntados abajo.",
+    "NO_ATT": "No hay archivos",
+    "EMBED": "Adjuntado abajo.",
+    "NO_EMBED": "No hay embeds."
+}
